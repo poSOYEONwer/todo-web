@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    line-height: 1;
+    margin: 0;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+/* ---setting--- */
+
+/* body img {
+    position: fixed;
+    z-index: -1;
+    top: -51rem;
+    left: -90rem;
+    opacity: 0.7;
+    transform: scale(0.6);
+} */
+
+body {
+    background-color: rgb(235, 236, 240);
+}
+
+#top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#login-form {
+    margin: 1vh;
+}
+
+#weather{
+    margin: 1vh;
+}
+
+
+#login-form input, #todo-form input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+    background-color: rgba(114, 114, 114, 0.2);
+    color: #030303;
+    width: 25vh;
+    height: 8vh;
+    font-size: 1.2rem;
+    
+}
+
+#login-form input::placeholder, #todo-form input::placeholder {
+    color:rgb(240, 240, 240);
+    font-family: 'Gothic A1', sans-serif;
+}
+
+#login-form button {
+    width: 10vh;
+    height: 6vh;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: rgba(75, 74, 74, 0.8);
+    color:#000000;
+    font-weight: 700;
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock {
+    font-size: 3rem;
+}
+#quotes {
+    font-size: 1.5rem;
+}
+
+#weather {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.finish-todo {
+    text-decoration: line-through;
+}
