@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css" id="link-css">
     <title>ToDo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&family=Rajdhani&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="theme-light">
     <div id="top-bar">
         <div id="login-form" class="hidden">
             <form action="" method="">
@@ -23,17 +23,19 @@
                 <button type="submit">LOGIN</button>
             </form>
         </div>
-    
+        <h1 id="greeting" class="hidden"></h1>
         <div id="weather">
             <span></span>
             <span></span>
         </div>
     </div>
     
+    
 
-    <div class="container">
-        
-        <h1 id="greeting" class="hidden"></h1>
+    <div class="container">    
+        <button id="laptopBtn">
+            <img src="../images/laptop_icon.png" alt="laptop_icon">
+        </button>
         <h2 id="clock">00:00:00</h2>
         <div id="quotes">
             <span></span>
@@ -52,6 +54,7 @@
 
     <!-- <script src="JS/background.js"></script> -->
     <script src="JS/weather.js"></script>
+    <script src="JS/toggleTheme.js"></script>
     <script src="JS/greetings.js"></script>
     <script src="JS/clock.js"></script>
     <script src="JS/quotes.js"></script>
