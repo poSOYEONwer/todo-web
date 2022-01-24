@@ -1,13 +1,9 @@
 /*
-다크모드와 라이트모드의 차이는 색상뿐
 
-구현
-localStorage에 사용자의 테마 저장 - initial 라이트모드
-버튼 누르면 토글 및 local storage 내용 변경
 */
 
 const body = document.body;
-const laptopBtn = document.querySelector("#laptopBtn");
+const laptopBtn = document.querySelector("#icon-btn");
 const THEME_LIGHT = "theme_light";
 
 function toggleTheme(e) {

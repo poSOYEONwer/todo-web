@@ -18,8 +18,9 @@ function saveToDos() {
 }
 
 function finishToDo(e) {
-  const li = e.target.parentElement;
-  li.classList.toggle(FINISH_TODO);
+  // e.preventDefault(); // 이 친구 default가 왜 submit이지..?
+  const finishSpan = e.target.previousSibling;
+  finishSpan.classList.toggle(FINISH_TODO);
 }
 
 function deleteToDo(e) {
@@ -35,9 +36,11 @@ function paintToDo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const finishBtn = document.createElement("button");
+  finishBtn.type = "button";
   finishBtn.innerText = "✓"
   finishBtn.addEventListener("click", finishToDo);
   const deleteBtn = document.createElement("button");
+  deleteBtn.type = "button";
   deleteBtn.innerText = "X";
   deleteBtn.addEventListener("click", deleteToDo);
   li.appendChild(span);

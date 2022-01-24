@@ -64,6 +64,10 @@ body {
     --box-shadow2: #555555;
     --btn-background: rgba(75, 74, 74, 0.8);
     --btn-text: #000000;
+    --calendar-background: #6b6b6b;
+    --gray-text: #c4c4c4;
+    --today-background: #a7a7a7;
+    --today-text: #ffffff;
 }
 /* light mode */
 .theme-light {
@@ -78,6 +82,10 @@ body {
     --box-shadow2: #ffffff;
     --btn-background: rgba(75, 74, 74, 0.8);
     --btn-text: #000000;
+    --calendar-background: #ffffff;
+    --gray-text: #3b3b3b;
+    --today-background: #cfcfcf;
+    --today-text: #000000;
 }
 
 body {
@@ -100,35 +108,18 @@ body {
     font-size: 2.5rem;
     color: var(--text);
 }
-
-#weather{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 2.5vh 3.5vh;
+#icon-btn {
+    margin: 2vh;
 }
-
-#weather span{
-    font-size: 2rem;
-    font-weight: 700;
+#icon-btn img {
+    width: 7vh;
+    height: 7vh;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 0.5rem var(--shadow)); 
+}
+#icon-text {
+    font-size: 1rem;
     color: var(--text);
-    margin-bottom: 1vh;
-}
-
-
-#login-form input, #todo-form input {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-color: var(--border);
-    background-color: var(--input-background);
-    color: var(--input-text);
-    padding: 2vh;
-    width: 25vh;
-    height: 8vh;
-    font-size: 1.2rem;
-    
 }
 
 #login-form {
@@ -138,6 +129,14 @@ body {
     width: 33vh;
     height: 8.5vh;
     color: var(--input-text);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: var(--border);
+    background-color: var(--input-background);
+    color: var(--input-text);
+    padding: 2vh;
+    font-size: 1.2rem;
     border-radius: 0.7rem;
     background: var(--background);
     box-shadow: inset 0.3rem 0.3rem 1rem var(--box-shadow1),
@@ -160,39 +159,53 @@ body {
     
 }
 
-#laptopBtn img {
-    width: 10vh;
-    height: 10vh;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 0.5rem var(--shadow)); 
-}
-
-#laptop-container {
+#weather{
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 15vh;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 2.5vh 3.5vh;
+}
+
+#weather span{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1vh;
+
+}
+
+.box-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 73vw;
+    height: 73vh;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    background: var(--background);
+    box-shadow: inset 0.3rem 0.3rem 1rem var(--box-shadow1),
+                inset -0.3rem -0.3rem 1rem var(--box-shadow2);
+}
+
+
+.left-container {
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-container {
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#laptop-container #laptop-text {
-    font-size: 1rem;
-    color: var(--text);
-}
-
-.container {
-    width: 100vw;
-    height: 70vh;
-    margin: 2vh 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
 #clock {
-    margin: 3vh;
+    margin: 2vh 0;
     font-size: 3rem;
     color: var(--text);
 }
@@ -201,32 +214,36 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 30vh;
-    height: 48vh;
+    width: 30vw;
+    height: 67vh;
 }
 
 #todo-form input {
+    border: none;
+    border-color: var(--border);
+    padding: 2vh;
+    font-size: 1.2rem;
     font-family: 'Nanum Myeongjo', serif;
     font-size: 2.3vh;
-    width: 32vh;
+    width: 22vw;
     height: 5.5vh;
     margin: 2vh 0;
     color: var(--input-text);
-    border-radius: 0.7rem;
+    border-radius: 0.3rem;
     background: var(--background);
     box-shadow: inset 0.3rem 0.3rem 1rem var(--box-shadow1),
                 inset -0.3rem -0.3rem 1rem var(--box-shadow2);
 }
 .todo-list-box {
-    width: 30vh;
-    height: 35vh;
+    width: 22vw;
+    height: 60vh;
     border-radius: 0.3rem;
     background: var(--background);
     box-shadow: 0.3rem 0.3rem 1rem var(--box-shadow1),
                 -0.3rem -0.3rem 1rem var(--box-shadow2);
 }
 .todo-list-box button {
-    width: 2vh;
+    width: 1.2vw;
     height: 2vh;
     color: var(--text);
     margin-left: 1vh;
@@ -242,9 +259,16 @@ body {
     font-family: 'Nanum Myeongjo', serif;
     color: var(--text);
 }
+
 #quotes {
-    margin: 2vh 0;
+    margin: 3vh auto;
+    width: 73vw;
+    /* height: vh; */
+    padding: 0.4vh 0.4vw;
     text-align: center;
+    border-radius: 0.1rem;
+    box-shadow: 0.3rem 0.3rem 1rem var(--box-shadow1),
+                -0.3rem -0.3rem 1rem var(--box-shadow2);
 }
 #quotes span {
     font-family: 'Playfair Display', serif;
@@ -257,8 +281,69 @@ body {
 .finish-todo {
     text-decoration: line-through;
 }
+  
+/* calendar */
+#calendar {
+margin: 0;
+width: 30vw;
+height: 57vh;
+/* padding: 5vh 5vw; */
+display: grid;
+grid-template-rows: 0.7fr 44px 5fr;
+grid-gap: 2px;
+}
+#dayNames {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+grid-gap: 2px;
+border-top: 2px solid;
+padding: 0.4em 0;
+}
+#dates {
+display: grid;
+grid-template: repeat(5, 1fr) / repeat(7, 1fr);
+grid-gap: 2px;
+}
+#title {
+font-family: 'Nanum Myeongjo', serif;
+font-size: 3vh;
+font-weight: 700;
+color: var(--text);
+}
 
-@media screen and (max-width: 620px) {
+.day {
+font-family: 'Nanum Myeongjo', serif;
+font-weight: 400;
+z-index: 1;
+color: var(--text);
+}
+
+.dayBox {
+/* outline: 2px solid var(--text); */
+padding: 0.5em;
+z-index: 1;
+font-weight: 400;
+background-color: var(--calendar-background);
+color: var(--text)
+}
+.gray {
+color: var(--gray-text);
+font-weight: 200;
+z-index: 0;
+background-color: var(--background);
+/* outline: 2px solid var(--text); */
+}
+.today {
+background: var(--today-background);
+font-weight: 600;
+color: var(--today-text);
+}
+
+@media screen and (max-width: 700px) {
+    #box-space{
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
     #greeting {
         font-size: 3vh;
         font-weight: 200;
@@ -270,12 +355,15 @@ body {
         font-size: 3vh;
         font-weight: 200;
     }
-    #laptopBtn img {
-        width: 7vh;
-        height: 7vh;
+    #icon-btn {
+        margin: 2vh;
     }
-    #laptop-container #laptop-text {
-        font-size: 2vh;
+    #icon-btn img {
+        width: 4vh;
+        height: 4vh;
+    }
+    #icon-text {
+        font-size: 1vh;
     }
     .container {
         margin: 0;
