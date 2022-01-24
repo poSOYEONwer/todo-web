@@ -18,7 +18,6 @@ function saveToDos() {
 }
 
 function finishToDo(e) {
-  // e.preventDefault(); // 이 친구 default가 왜 submit이지..?
   const finishSpan = e.target.previousSibling;
   finishSpan.classList.toggle(FINISH_TODO);
 }

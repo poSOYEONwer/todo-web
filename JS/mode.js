@@ -22,8 +22,6 @@ function userTheme() {
     }
 }
 
-
-// 왜 한 번만 바뀜...? toggle이 안됨 새로고침 해야만 바뀜
 function toggleTheme(e) {
     e.preventDefault();
     if (currentTheme === LIGHT_MODE) {

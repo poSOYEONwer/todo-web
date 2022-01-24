@@ -4,10 +4,6 @@ const quotes = [
         author: "Alec Bourne",
     },
     {
-        quote: "There is more to life than increasing its speed",
-        author: "Mahatma Gandhi",
-    },
-    {
         quote: "If you want to see what children can do, you must stop giving them things.",
         author: "Norman Douglas",
     },

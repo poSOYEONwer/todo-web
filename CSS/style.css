@@ -182,7 +182,7 @@ body {
     width: 73vw;
     height: 73vh;
     margin: 0 auto;
-    border-radius: 0.3rem;
+    border-radius: 0.2rem;
     background: var(--background);
     box-shadow: inset 0.3rem 0.3rem 1rem var(--box-shadow1),
                 inset -0.3rem -0.3rem 1rem var(--box-shadow2);
@@ -340,9 +340,18 @@ color: var(--today-text);
 }
 
 @media screen and (max-width: 700px) {
-    #box-space{
-        overflow-x: scroll;
-        overflow-y: hidden;
+    #login-form input {
+        width: 25vw;
+        height: 5vh;
+        padding: 2vh;
+        font-size: 1rem;
+        border-radius: 0.2rem;
+    }
+    #login-form button {
+        width: 5.5vh;
+        height: 5vh;
+        margin-left: 1.3vh;
+        border-radius: 0.3rem;
     }
     #greeting {
         font-size: 3vh;
@@ -365,17 +374,61 @@ color: var(--today-text);
     #icon-text {
         font-size: 1vh;
     }
-    .container {
+    .box-space {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: hidden;
+        overflow-y: auto; 
+        width: 92vw;
+        height: 73vh;
+        margin: 0 auto;
+    }
+    .left-container, .right-container {
         margin: 0;
+        width: 92vw;
+        height: 73vh;
+        padding: 2vh;
     }
     #clock {
-        margin: 0;
+        margin: 0 0 3vh 0;
         font-size: 3rem;
+        font-weight: 200;
         color: var(--text);
     }
-    #quotes {
-        font-size: 2vh;
-        font-weight: 200;
-        margin: 1vh 0;
+    #todo-form {
+        width: 68vw;
+        height: 68vh;
     }
+    #todo-form input {
+        width:80vw;
+        margin: 1vh 0 2vh 0;
+    }
+    .todo-list-box {
+        width: 77vw;
+    }
+    .todo-list-box button {
+        width: 5vw;
+        height: 5vh;
+        margin-left: 2vw;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    #quotes {
+        padding: 0;
+    }
+    #quotes span{
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+    #calendar {
+        margin: 0;
+        width: 80vw;
+        height: 57vh;
+        /* padding: 5vh 5vw; */
+        display: grid;
+        grid-template-rows: 0.7fr 44px 5fr;
+        grid-gap: 2px;
+        }
 }

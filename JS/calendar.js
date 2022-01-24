@@ -1,3 +1,4 @@
+// Reference: @frederickallen's codepen
 const calendar = document.getElementById("calendar");
 const dates = document.getElementById("dates");
 const monthYear = document.getElementById("title");
@@ -16,7 +17,7 @@ const months = [
     '12월',
 ];
 
-let today = function() {
+let today = () => {
     let now = new Date();
     return {
         year: now.getFullYear(),
@@ -30,15 +31,15 @@ let current = {
     year: today().year
 };
 
-let firstDay = function(Month, Year) {
+let firstDay = (Month, Year) => {
     return new Date(Year, Month).getDay();
 };
 
-let daysInMonth = function(Month, Year) {
+let daysInMonth = (Month, Year) => {
     return 32 - new Date(Year, Month, 32).getDate();
 };
 
-let lastDay = function(Month, Year) {
+let lastDay = (Month, Year) => {
     if (Month - 1) {
         return daysInMonth(Month - 1, Year);
     } else {
@@ -46,7 +47,7 @@ let lastDay = function(Month, Year) {
     }
 };
 
-let dayCreate = function(text, today = false, current = true) {
+let dayCreate = (text, today = false, current = true) => {
     let dayDiv = document.createElement("div");
 
     if (!current) {
@@ -60,12 +61,12 @@ let dayCreate = function(text, today = false, current = true) {
     dates.appendChild(dayDiv);
 };
 
-let monthText = function(Month, Year) {
+let monthText = (Month, Year) => {
     let text = Year + "년" + " " + months[Month];
     monthYear.innerText = text;
 };
 
-let render = function(Month, Year) {
+let render = (Month, Year) => {
     monthText(Month, Year);
     let highlightToday = false;
     if (Month == today().month && Year == today().year) {
