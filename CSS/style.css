@@ -354,14 +354,14 @@ color: var(--today-text);
         border-radius: 0.3rem;
     }
     #greeting {
-        font-size: 3vh;
+        font-size: 1rem;
         font-weight: 200;
     }
     #weather {
         margin: 2.5vh 3.5vh 0 2.5vh;
     }
     #weather span{
-        font-size: 3vh;
+        font-size: 1rem;
         font-weight: 200;
     }
     #icon-btn {
